@@ -1,5 +1,5 @@
 # alexindigo/node-dev
-FROM      alexindigo/base_dev
+FROM      alexindigo/base-dev
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
 # Pull latest node
