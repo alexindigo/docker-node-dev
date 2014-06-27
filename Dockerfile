@@ -1,12 +1,13 @@
 # alexindigo/node-dev
-FROM      alexindigo/base-dev
+FROM      alexindigo/base-dev:ubuntu_12.04-1
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
 # Node version
 ENV       NODE_VERSION v0.10.29
 
-# Pull latest node
-RUN       wget --quiet http://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz && tar -xzf node-${NODE_VERSION}.tar.gz
+# Pull specified node
+RUN       curl -s http://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz -o node-${NODE_VERSION}.tar.gz && \
+          tar -xzf node-${NODE_VERSION}.tar.gz
 
 # Install node
 RUN       cd node-${NODE_VERSION} && ./configure && make && make install
