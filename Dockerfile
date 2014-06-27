@@ -6,7 +6,7 @@ MAINTAINER Alex Indigo <iam@alexindigo.com>
 ENV       NODE_VERSION v0.10.29
 
 # Pull specified node
-RUN       curl -s http://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz -o node-${NODE_VERSION}.tar.gz && \
+RUN       curl -L -s http://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz -o node-${NODE_VERSION}.tar.gz && \
           tar -xzf node-${NODE_VERSION}.tar.gz
 
 # Install node
