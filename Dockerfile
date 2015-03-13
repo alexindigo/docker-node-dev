@@ -3,7 +3,7 @@ FROM      alexindigo/base-dev:ubuntu_12.04-1
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
 # Node version
-ENV       NODE_VERSION v0.10.29
+ENV       NODE_VERSION v0.10.37
 
 # Pull specified node
 RUN       curl -L -s http://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz -o node-${NODE_VERSION}.tar.gz && \
